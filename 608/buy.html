@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="index.css">
+<meta charset="UTF-8">
+<title>购买页面</title>
+	<div align="right" class="front" >
+		| 放映赞助商 <a href="https://www.iqiyi.com/"><img src="images/iQIYI.png" width="115px"> </a> |	
+   	</div>	
+	<style>
+	body{
+		background: linear-gradient(to right,rgba(242,179,173),rgba(244,233,233));
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	}
+</style>
+</head>
+
+<body align="center" >
+	<h1>你也可以选择直接购买</h1>
+	<h2><p style="color: #FF0004">!!!!!!!</p>现在购买，立享五折优惠<p style="color: #FF0004">!!!</p></h2>
+	<table align="center">
+	<tr>
+		<th>专业版资格证 <sup>1</sup>:</th>
+		<th class="prize"> ¥ 99 </th>
+		<th class="discount"> 50% Discount！</th>
+		<th><span>¥199</span></th>
+	</tr>
+	<tr>
+		<th>普通版资格证:</th>
+		<th class="prize"> ¥ 69 </th>
+		<th class="discount"> 50% Discount！</th>
+		<th><span>¥139</span></th>	
+	</tr>
+	<tr>
+		<th>永久版:</th>
+		<th>  ¥ 209 <sup> 2</sup></th>
+	</tr>
+	
+	</table><br>
+	 <button id="pay" class="payNow"><a href="pay.html" style="color: white">立即支付</a></button>
+
+	<style>
+		a{
+			border: thin;
+			text-decoration: none;
+		}
+	</style>
+	<p></p><div  class="tips2" >
+        <hr />    
+        <h6>1:专业版即长期版;普通版即短期版<br>
+			2:永久版不参与此优惠<br>
+			<a href="about.html">关于</a>
+        </h6>
+    </div>
+	
+	<div  class="tips1" align="right"> 
+        <h6><a href="https://cloud.google.com"><img src="images/google cloud.png" width="110.5px" height="39px"></a>
+        </h6>
+    </div>	
+	<style type="text/CSS">
+        span{
+            color :#888888;
+            text-decoration: line-through;
+        }
+	</style>
+	<div class="copyright" align="center">
+		<h5 style="background: rgba(255,255,255,.70);width: 270px;border-radius: 10px;backdrop-filter: blur(15px);">Copyrigh©️Younnishing(懿笙文化)</h5>
+	<script>
+		var pay = document.getElementById("pay")
+		pay.onclick = function(){
+			var VerCode = prompt("请输入验证码");
+			if(VerCode != '608styy'){
+				alert("验证失败");
+				return false;
+			}else{
+				alert("验证成功！准备跳转到支付界面...")
+			}
+		}
+	</script>
+</div>
+</body>
+</html>
