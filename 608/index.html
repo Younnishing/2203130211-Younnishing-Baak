@@ -1,9 +1,8 @@
 <html lang="ch">
 <head>
-		
 	<link rel="stylesheet" href="index.css">
 	<div align="right" class="front" >
-		| 放映赞助商 <a href="https://www.iqiyi.com/"><img src="images/iQIYI.png" width="115px"> </a> |	
+		| 放映赞助商 <a href="https://www.iqiyi.com/"><img src="images/iQIYI.png" width="115px"> </a> |
    	</div>		
     <meta charset="UTF-8">
     <title>608 视听影院</title>
@@ -16,11 +15,13 @@
 		}
 	</style>
 </head>
-<body  align="center">
+<body  align="center" id="body" style="cursor: none">
+<img src="images/cursor.png" class="cursor" id="cursor">
+	<br id="top"><br><br><br>
 	<embed src="images/bgm.mp3" autostart="true" loop="-1" hidden="true">
-	<div align="center"><br><br><h1><span><img src="images/title.png" width="380px" height="60px"></span></h1>
-	<a href="aboutus.html">我们是谁？</a>
-    <h2>我   们</h2>
+	<div align="center"><br><br><h1><span><img src="images/title.png" width="380px" height="60px" name = "欢迎来到608视听影院" ></span></h1><br>
+	<a href="aboutus.html">我们是谁？</a><br>
+    <h2>我   们</h2><br>
     <h2>每天晚9:00,有 <img class="jump" src="images/dan.png" width="30px"> 你就来</h2>
 	<hr width="1000" color="#E83D40" border="100px">
 	<img src="images/bloods.png" width="900" class="bloods" align="center">
@@ -28,12 +29,12 @@
 		<img src="images/blood.png" width="300px" height="200">
 	</div>
 	<div class="today text">
-		  23日放映<br>
+		 <a href="#ago" style="color: white"> 23日放映</a><br>
 		<th>   23日停止放映</th>	<br>
 		 <input type="submit" name="关于" value="关于" onclick="alert('你可以前往理工大学A8-608参观我们的影院')">
 	</div>
 	<div align="center">
-		  <h2><span style="color: mediumvioletred">我们过往的放映<sup style="color: black"> 2</sup></span></h2>
+		  <h2 id="ago"><span style="color: mediumvioletred">我们过往的放映<sup style="color: black"> 2</sup></span></h2>
      	  <table border="1" class="father">
         	<tr>
 				<th>日期</th>
@@ -103,28 +104,69 @@
     </div>
   
 	<div class="copyright" align="center">
-		<h5 style="background: rgba(0,0,0,.70);border-radius: 10px;backdrop-filter: blur(15px);">Copyrigh©️Younnishing(懿笙文化)</h5>	
+		<h5 style="background: rgba(0,0,0,.70);border-radius: 10px;backdrop-filter: blur(15px);">Copyright©2020-2022 Younnishing(懿笙文化)<br>All rights reserved.</h5>
 	</div>
 		
 	<div class="tips" align="right">   
         <h6>&nbsp;1:你可以在所提供的搜索引擎上打开<br />
             &nbsp;2:此处为不完全举例<br>
 			<a href="about.html">&nbsp; 关于</a>
-			
         </h6>
-	           
 	</div>
+<table class="about" id="about">
+	<tr><th>作者：Younnishing
+		邮箱：<a href="https://www.gmail.com">younnishing@gmail.com</a><br>
+		微博：<a href="https://weibo.com/6310243176/profile?rightmod=1&wvr=6&mod=personinfo">玉笙younnishing</a><br>
+		B站：<a href="https://b23.tv/1L5xjPi">Younnishing</a><br>
+		&nbsp;网站开源，源码:<a href="https://github.com/Younnishing/2203130211-Younnishing-Baak.git" >查看 GitHub</a><br>
+	</th></tr>
+	<br>
+</table>
+	<div class="Navigation">
+			<table align="right">
+				<tr><th align="right"><a href="#ago" class="Nav" id="Nav_1">放映</a></th></tr>
+				<tr><th> </th></tr>
+				<tr><th> </th></tr>
+				<tr><th align="right"><a href="#top" class="Nav" id="Nav_2">👆</a></th></tr>
+				<tr><th> </th></tr>
+				<tr><th> </th></tr>
+				<tr><th align="right"><a href="#" class="Nav" id="Nav_3">关于</a></th></tr>
+			</table>
+	</div>
+
 	<div class="photo">
 	
-	<div class="tips2" >   
-        <h6><a href="https://cloud.google.com"><img src="images/google cloud.png" width="110.5px" height="39px"></a>
-        </h6>          
-    </div>
-	<script type="text/javascript">
-		alert("23日停止放映通告:\n琴理考核，停放一日");
-		alert("作者：Younnishing\n邮箱：younnishing@gmail.com\n微博：玉笙younnishing\nb站：Younnishing");
-	</script>
-	</embed>	
+		<div class="tips2" >
+			<h6><a href="https://cloud.google.com"><img src="images/google cloud.png" width="110.5px" height="39px"></a>
+			</h6>
+    	</div>
+
+		<script type="text/javascript">
+			alert("作者：Younnishing\n邮箱：younnishing@gmail.com\n微博：玉笙younnishing\nb站：Younnishing");
+			var Nav_1 = document.getElementById("Nav_1");
+			var Nav_2 = document.getElementById("Nav_2");
+			var Nav_3 = document.getElementById("Nav_3");
+			var body = document.getElementById("body");
+			var about = document.getElementById("about")
+			var cursor = document.getElementById("cursor");
+
+			Nav_1.onmouseover = function (){ Nav_1.innerHTML = "之前的放映"; }
+			Nav_1.onmouseleave = function (){ Nav_1.innerHTML = "放映"; }
+			Nav_2.onmouseover = function (){ Nav_2.innerHTML = "回到顶部👆"; }
+			Nav_2.onmouseleave = function (){ Nav_2.innerHTML = "👆"; }
+			Nav_3.onmouseover = function (){ Nav_3.innerHTML = "关于懿笙"; }
+			Nav_3.onmouseleave = function (){ Nav_3.innerHTML = "关于"; }
+			Nav_3.onclick = function (){ about.style.width = "400px"; about.style.height = "400px";
+				about.style.fontSize = "20px"; about.style.transition = "0.2s";}
+			about.onmouseleave = function (){ about.style.width = "40px"; about.style.height = "50px";
+				about.style.fontSize = "1px"; }
+			document.addEventListener('mousemove',function (e) {
+				var x=e.pageX;	var y=e.pageY;
+				cursor.style.left=x +1+'px';	cursor.style.top=y +1+'px'; })
+		</script>
+	</div>
+	</embed>
+
 </body>
 </html>
 
